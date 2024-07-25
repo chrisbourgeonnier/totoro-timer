@@ -24,7 +24,13 @@
     Short Break: <input type="number" min="1" placeholder="(5 by default)" class="duration" data-duration-id="short"><br>
     Long Break: <input type="number" min="1" placeholder="(15 by default)" class="duration" data-duration-id="long"><br>
   </div>
-
+  <div>
+    <button onclick="toggleBackgroundControl()" id="background-btn">Customize your background</button>
+    <div id="background-control" class="hidden">
+      <input type="url" placeholder="Your image url (ftp, http or https)">
+      <button onclick="updateBackground()" id="updateBackground-btn">Update</button>
+    </div>
+  </div>
 </body>
 
 <script src="script.js"></script>
