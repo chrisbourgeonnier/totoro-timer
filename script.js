@@ -107,3 +107,20 @@ const resetTimer = () => {
   updateTimer();
   updateControlButtons(false);
 }
+
+const toggleBackgroundControl = () => {
+  const backgroundControl = document.getElementById("background-control");
+  backgroundControl.classList.toggle("hidden");
+}
+
+
+const updateBackground = () => {
+  const backgroundUrlInput = document.querySelector("#background-control > input");
+  const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+
+  if (urlRegex.test(backgroundUrlInput.value)) {
+    document.documentElement.style.backgroundImage = `url(${backgroundUrlInput.value})`
+  } else {
+    document.documentElement.style.backgroundImage = `url(assets/background.png)`
+  }
+}

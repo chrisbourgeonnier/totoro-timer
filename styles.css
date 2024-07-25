@@ -3,7 +3,9 @@
   --short: #aaf;
   --long: rgb(141, 215, 141);
   background-image: url(assets/background.png);
-  background-size: cover;
+  width: 100%;
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 html {
@@ -11,9 +13,8 @@ html {
   background-color: var(--pomodoro);
   color: white;
   display: flex;
-  justify-content: center;
   height: 100%;
-  margin: 0;
+  margin: 5rem 0;
   padding: 0;
   align-items: center;
   flex-direction: column;
@@ -78,7 +79,8 @@ html {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-#duration-control {
+#duration-control,
+#background-control {
   margin-top: 20px;
   user-select: none;
   font-size: 18px;
@@ -88,4 +90,31 @@ html {
   margin-top: 5px;
   font-size: 16px;
   width: 120px;
+}
+
+#background-btn {
+  border: none;
+  background-color: rgba(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  mix-blend-mode: lighten;
+  margin-top: 40px;
+  padding: 5px 10px;
+  font-size: 20px;
+  transition-duration: 0.2s;
+}
+
+#background-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#background-control input {
+  margin-top: 5px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.hidden {
+  display: none;
 }
